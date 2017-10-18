@@ -4,6 +4,7 @@ import React  from 'react'
 import { Route } from 'react-router-dom'
 import { DefaultHeader } from './ui'
 import HomePage from './home'
+import Blog from './blog'
 
 import style from './style.scss'
 
@@ -21,6 +22,11 @@ const App = (props: Props) => {
 				exact
 				path="/"
 				render={() => (<HomePage {...props} />)}
+			/>
+			<Route
+				exact
+				path="/blog/"
+				render={() => (<Blog {...props} />)}
 			/>
 		</div>
 	)

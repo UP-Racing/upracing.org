@@ -5,11 +5,11 @@ import cx from 'classnames'
 import moment from 'moment'
 
 import { Image, Nav, CardContainer, Card, Button, WidthControlled } from '../ui'
+import selector from '../../store/selector'
 
 import style from './style.scss'
 
 import type { Store } from '../../store/entities'
-import selector from '../../store/selector'
 
 type Props = {
 	store: Store,
