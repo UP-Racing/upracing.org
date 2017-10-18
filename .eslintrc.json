@@ -1,0 +1,61 @@
+{
+    "parser": "babel-eslint",
+    "rules": {
+        "strict": 0,
+        "quotes": [1, "single"],
+        "linebreak-style": [2, "unix"],
+        "semi": [1, "never"],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "no-console": 1,
+        "no-extra-semi": 1,
+        "comma-dangle": [2, "always-multiline"],
+        "flowtype/define-flow-type": 1,
+        "flowtype/require-parameter-type": [
+            2,
+            {
+                "excludeArrowFunctions": true
+            }
+        ],
+        "flowtype/space-after-type-colon": [
+            1,
+            "always"
+        ],
+        "flowtype/space-before-type-colon": [
+            1,
+            "never"
+        ],
+        "flowtype/type-id-match": [
+            2,
+            "^([A-Z][a-z0-9]*)*$"
+        ],
+        "flowtype/use-flow-type": 1,
+        "flowtype/valid-syntax": 1,
+        "eol-last": 2
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": "eslint:recommended",
+    "plugins": [
+        "react",
+        "flowtype"
+    ],
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": false,
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true,
+            "modules": true
+        }
+    },
+    "settings": {
+        "flowtype": {
+            "onlyFilesWithFlowAnnotation": false
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import '../ui/core';
+
+.container {
+  width: 100%;
+}
+
+.header {
+  justify-content: center;
+  width: 100%;
+  max-height: calc(100vh - 8rem);
+  background-color: $black;
+
+  .hero {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+
+  .faded {
+    opacity: 0;
+  }
+}
+
+.main {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.sectionHeader {
+  width: 100%;
+  padding: .5rem 1rem;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}

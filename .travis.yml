@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - node
+  - 6
+  - 5
+  - 4
+
+script:
+  - make qa
+
+before_script:
+  - cp config_sample.js config.js
+  - npm i -g flow-typed
+  - flow-typed install

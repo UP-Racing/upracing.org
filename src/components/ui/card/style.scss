@@ -1,0 +1,37 @@
+@import '../core';
+
+.container {
+  flex: 100%;
+  margin: .5rem 0;
+  text-decoration: none;
+
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  &:hover {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.header {
+  flex: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+
+  background-color: $primary-colour;
+  color: $primary-colour-text;
+
+  h3 {
+    font-size: 125%;
+  }
+}
+
+.body {
+  flex: 100%;
+
+  padding: 1rem;
+
+  background-color: $white;
+  color: $black;
+}

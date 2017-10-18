@@ -1,0 +1,24 @@
+$real-white: #fff;
+$real-black: #000;
+$invisible: hsla(0, 0, 0, 0);
+$white: darken($real-white, 2%);
+$primary-colour:  #873399;
+$primary-colour-text: darken($white, 2%);
+$secondary-colour-text: #727272;
+$divider-colour:        #b6b6b6;
+$code-background-color: #fffff0;
+
+$black: lighten($real-black, 5%);
+$header-colour: $primary-colour; //hsla(295, 60%, 20%, 1);
+$nav-colour: darken($header-colour, 0%);
+$border: darken($real-white, 20%);
+$lift-off-grey: #888;
+
+$main-background: #eee;
+$body-background: $real-white;
+
+$card-background: $real-white;
+$card-border: darken($card-background, 15%);
+$card-border-radius: .25rem;
+$card-width: calc(50% - 1rem);
+$card-width-wrap: 48rem;
