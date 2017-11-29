@@ -3,12 +3,12 @@
 import React from 'react'
 import cx from 'classnames'
 
-import { Page, CardContainer, Card, Image } from '../ui'
+import { Page, Card, Image } from '../ui'
 import selector from '../../store/selector'
 
 import style from './style.scss'
 
-import type { Store, Sponsor } from '../store/entities'
+import type { Store, Sponsor } from '../../store/entities'
 
 const LEVEL_PLATINUM = 1
 const LEVEL_GOLD = 2

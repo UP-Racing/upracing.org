@@ -34,8 +34,6 @@ export default class Server {
 		log.info('Starting Repo')
 		await store.reset()
 		await prismic.load()
-
-		console.log((await store.getState()))
 	}
 
 	makeWebServer = () => {

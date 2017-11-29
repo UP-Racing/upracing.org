@@ -5,11 +5,11 @@ import _ from 'lodash'
 import { DEFAULT_STORE_STATE } from './entities'
 
 import type { Action } from './action'
-import type { Store, Map, Work, Post } from './entities'
+import type { Store, Map, BlogPost } from './entities'
 
-const getIdsSortedByDate = (data: Map<Work>|Map<Post>) => {
-	const values = ((Object.values(data): Array<any>): Array<Work | Post>)
-	const datesAndSlugs = values.map((d: Work|Post) => ({ ...d, date: d.date.unix() }))
+const getIdsSortedByDate = (data: Map<BlogPost>) => {
+	const values = ((Object.values(data): Array<any>): Array<BlogPost>)
+	const datesAndSlugs = values.map((d: BlogPost) => ({ ...d, date: d.date.unix() }))
 	const sorted = _.sortBy(datesAndSlugs, 'date').reverse()
 	return sorted.map(d => d.slug)
 }

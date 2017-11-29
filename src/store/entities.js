@@ -7,7 +7,7 @@ export type Map<T> = {
 }
 
 export type Media = {
-	url: string,
+	src: string,
 	width: number,
 	height: number,
 	alt: ?string,
@@ -22,6 +22,7 @@ export type BlogPost = {
 	title: string,
 	date: moment,
 	content: string,
+	blurb: string,
 }
 
 export type Sponsor = {
