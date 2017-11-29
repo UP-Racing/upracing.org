@@ -1,0 +1,18 @@
+[ignore]
+.*/node_modules/gulp-flowtype/.*
+.*/node_modules/config-chain/.*
+.*node_modules/fbjs.*
+.*node_modules/npmconf/.*
+
+[include]
+
+[libs]
+flow-typed/
+
+[options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+unsafe.enable_getters_and_setters=true
+experimental.strict_type_args=true
+module.name_mapper='^config.*' -> '<PROJECT_ROOT>/config.js'
+module.name_mapper='^.*\.s?css$' -> 'css-module-flow'

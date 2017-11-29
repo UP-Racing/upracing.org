@@ -1,0 +1,16 @@
+@import '../core';
+
+.button {
+  display: flex;
+  margin: .5rem auto;
+  padding: 1rem;
+  color: darken(#fff, 2%);
+  text-decoration: none;
+  background-color: $primary-colour;
+
+  transition: background-color 250ms;
+
+  &:hover {
+    background-color: darken($primary-colour, 5%);
+  }
+}

@@ -1,0 +1,53 @@
+@import '../core';
+
+.container {
+  display: flex;
+  flex: 100%;
+  justify-content: center;
+  align-items: center;
+  min-height: 2.5rem;
+  background-color: $primary-colour;
+}
+
+.nav {
+  display: flex;
+  flex: 100%;
+  justify-content: space-around;
+  padding: .5rem 0;
+  font-size: 150%;
+
+  a {
+    margin: 0 .75rem;
+    padding: 0;
+    border-bottom: .15rem solid hsla(0, 0, 0, 0);
+    color: darken(#fff, 4%);
+    text-decoration: none;
+    transition: border-bottom-color 250ms;
+
+    &:hover {
+      border-bottom-color: darken(#fff, 2%);
+    }
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 44rem) {
+  .nav {
+    a {
+      &:first-of-type {
+        margin-left: .75rem;
+      }
+
+      &:last-of-type {
+        margin-left: .75rem;
+      }
+    }
+  }
+}

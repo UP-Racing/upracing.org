@@ -1,0 +1,80 @@
+@import '../ui/core';
+
+.container {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  padding: 2rem 1rem;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.block {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+
+  h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 125%;
+    padding-bottom: .5rem;
+  }
+}
+
+.sponsor {
+  flex: 1;
+  justify-content: center;
+
+  .imageContainer {
+    width: 100%;
+    justify-content: center;
+    height: 6rem;
+    overflow: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  h4 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.platinum {
+  min-width: calc(50% - 1rem);
+}
+
+.gold {
+  min-width: calc(33% - 1rem);
+}
+
+
+.silver {
+  min-width: calc(25% - 1rem);
+}
+
+
+.bronze {
+  min-width: calc(20% - 1rem);
+}
+
+
+.imageContainer {
+  justify-content: center;
+}
+
+@media screen and (max-width: 30rem) {
+  .sponsor {
+    min-width: calc(100% - .25rem);
+  }
+}
+
