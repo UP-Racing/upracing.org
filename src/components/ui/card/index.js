@@ -14,6 +14,7 @@ type PropTypes = {
 	className?: string,
 	children?: any,
 	external?: boolean,
+	headerAtBottom?: boolean,
 }
 
 const Link = (props: PropTypes) => {
@@ -43,14 +44,22 @@ const Card = (props: PropTypes) => (
 	<Link
 		{...props}
 	>
-		<article>
-			<div className={style.header}>
-				<h3>{props.title}</h3>
-				{props.date && (<h4>{props.date.format('YYYY-MM-DD')}</h4>)}
-			</div>
+		<article className={style.card}>
+			{!props.headerAtBottom && (
+				<div className={style.header}>
+					<h3>{props.title}</h3>
+					{props.date && (<h4>{props.date.format('YYYY-MM-DD')}</h4>)}
+				</div>
+			)}
 			<div className={style.body}>
 				{props.children}
 			</div>
+			{props.headerAtBottom && (
+				<div className={style.header}>
+					<h3>{props.title}</h3>
+					{props.date && (<h4>{props.date.format('YYYY-MM-DD')}</h4>)}
+				</div>
+			)}
 		</article>
 	</Link>
 )

@@ -12,7 +12,7 @@ const nav = () => (
 			<div className={style.nav} >
 				<Link to="/">UPRacing</Link>
 				<Link to="/blog">Blog</Link>
-				<Link to="/team">Team</Link>
+				{/*<Link to="/team">Team</Link>*/}
 				<Link to="/sponsors">Sponsors</Link>
 				<a href="mailto:upracing.fs@gmail.com">Contact</a>
 			</div>

@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom'
 import { DefaultHeader } from './ui'
 import HomePage from './home'
 import Blog from './blog'
+import Sponsors from './sponsors'
 
 import style from './style.scss'
 
@@ -27,6 +28,11 @@ const App = (props: Props) => {
 				exact
 				path="/blog/"
 				render={() => (<Blog {...props} />)}
+			/>
+			<Route
+				exact
+				path="/sponsors/"
+				render={() => (<Sponsors {...props} />)}
 			/>
 		</div>
 	)

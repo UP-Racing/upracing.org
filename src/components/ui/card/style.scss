@@ -2,7 +2,7 @@
 
 .container {
   flex: 100%;
-  margin: .5rem 0;
+  margin: .5rem;
   text-decoration: none;
 
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -12,12 +12,16 @@
   }
 }
 
+.card {
+  border-radius: 2px;
+}
+
 .header {
   flex: 100%;
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem;
+  padding: .5rem;
 
   background-color: $primary-colour;
   color: $primary-colour-text;

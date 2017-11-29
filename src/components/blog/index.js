@@ -6,6 +6,8 @@ import moment from 'moment'
 import { Page, CardContainer, Card } from '../ui'
 import selector from '../../store/selector'
 
+import style from './style.scss'
+
 import type { Store } from '../../store/entities'
 
 const Blog = ({ store }: { store: Store }) => {

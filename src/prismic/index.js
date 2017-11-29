@@ -84,6 +84,20 @@ const load  = async () => {
 				})
 				break
 			}
+			case 'sponsor': {
+				const sponsor = {
+					name: joinText(result.rawJSON.name),
+					link: result.rawJSON.website.url,
+					image: parseMedia(result.rawJSON.logo),
+					level: result.rawJSON.level,
+				}
+
+				await dispatch({
+					type: 'UPDATE_SPONSOR',
+					sponsor,
+				})
+				break
+			}
 		}
 	}
 	log.info('Store updated')

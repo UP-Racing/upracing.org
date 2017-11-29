@@ -35,9 +35,18 @@ export default (store: Store = DEFAULT_STORE_STATE, action: Action) => {
 
 			next.blogPostsByDate = getIdsSortedByDate(next.blogPosts)
 
-			// console.log(next)
-
 			return next
+		}
+		case 'UPDATE_SPONSOR': {
+			const { sponsor } = action
+
+			const sponsors = store.sponsors.filter(s => s.name !== sponsor.name)
+			sponsors.push(sponsor)
+
+			return {
+				...store,
+				sponsors,
+			}
 		}
 		default: {
 			return store

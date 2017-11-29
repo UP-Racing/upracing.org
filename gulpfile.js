@@ -111,7 +111,7 @@ gulp.task('nodemon', ['watch'], () => {
 	nodemon({
 		script: paths.buildFolder + 'index.js',
 		watch: paths.buildFolder,
-		delay: '1000ms',
+		delay: '1',
 	})
 })
 

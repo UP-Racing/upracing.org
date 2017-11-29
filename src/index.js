@@ -32,6 +32,7 @@ export default class Server {
 
 	initRepo = async () => {
 		log.info('Starting Repo')
+		await store.reset()
 		await prismic.load()
 
 		console.log((await store.getState()))

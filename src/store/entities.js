@@ -24,10 +24,18 @@ export type BlogPost = {
 	content: string,
 }
 
+export type Sponsor = {
+	name: string,
+	link: string,
+	image: Media,
+	level: number,
+}
+
 export type Store = {
 	homePage: HomePage,
 	blogPosts: Map<BlogPost>,
 	blogPostsByDate: string[],
+	sponsors: Sponsor[],
 }
 
 export const DEFAULT_STORE_STATE: Store = {
@@ -36,4 +44,5 @@ export const DEFAULT_STORE_STATE: Store = {
 	},
 	blogPosts: {},
 	blogPostsByDate: [],
+	sponsors: [],
 }

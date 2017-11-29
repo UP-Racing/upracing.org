@@ -44,6 +44,12 @@ export const dispatch = async (action: Action) => {
 	await new Promise((res) => redisClient.set(STORE_NAME, JSON.stringify(nextState), () => res()))
 }
 
+export const reset = () => new Promise((res) =>
+	redisClient.set(STORE_NAME, JSON.stringify(DEFAULT_STORE_STATE), () => res())
+)
+
+
 export default {
 	getState,
+	reset,
 }

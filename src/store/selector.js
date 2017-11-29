@@ -14,10 +14,13 @@ const findMostRecentBlogPosts = (store: Store, n?: number, offset: number = 0) =
 
 const findBlogPostBySlug = (store: Store, slug: string) => store.blogPosts[slug]
 
+const findSponsorByLevel = (store: Store, level: number) => store.sponsors.filter(s => s.level === level)
+
 export default {
 	findHomePage,
 	findAllBlogPosts,
 	findMostRecentBlogPosts,
 	findBlogPostBySlug,
+	findSponsorByLevel,
 }
 
