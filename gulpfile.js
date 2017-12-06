@@ -9,7 +9,7 @@ const runSequence = require('run-sequence')
 const imagemin = require('gulp-imagemin')
 
 const babel = require('gulp-babel')
-const webpackConfig = require('./webpack.config.js')
+let webpackConfig = require('./webpack.config.js')
 const webpack = require('webpack')
 
 const config = require('./config');
@@ -54,6 +54,11 @@ function handleError(error) {
 		util.log('Production error')
 	}
 }
+
+gulp.task('switchToProduction', (cb) => {
+	webpackConfig = require('./webpack.config.js')
+	cb()
+})
 
 gulp.task('build:server', () => {
 	return gulp.src(paths.src.serverFiles, { base: paths.src.base })
@@ -119,6 +124,8 @@ gulp.task('watch', ['browser-sync', 'build'], () => {
 	gulp.watch(paths.src.resourcesFolder + '**/*', ['build:public:resources'])
 	gulp.watch(paths.src.serverFiles.concat(paths.src.components), ['build:server'])
 })
+
+gulp.task('production', ['switchToProduction', 'build'])
 
 gulp.task('default', (cb) => {
 	runSequence(['build'], ['browser-sync'], cb)
