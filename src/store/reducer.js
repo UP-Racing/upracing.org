@@ -25,6 +25,8 @@ export default (store: Store = DEFAULT_STORE_STATE, action: Action) => {
 		case 'UPDATE_BLOG_POST': {
 			const { blogPost } = action
 
+			// console.log(blogPost)
+
 			const next = {
 				...store,
 				blogPosts: {

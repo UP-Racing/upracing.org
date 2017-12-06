@@ -35,7 +35,6 @@ const SponsorCard = ({ sponsor, className }: { sponsor: Sponsor, className: stri
 
 const SponsorBlock = ({ sponsors, name }: { sponsors: Sponsor[], name: string}) => (
 	<div className={style.block}>
-		<h3>{name}</h3>
 		{sponsors.map((s, i) =>
 			<SponsorCard sponsor={s} className={style[name.toLowerCase()]} key={i} />
 		)}
@@ -75,6 +74,7 @@ const Sponsors = ({ store }: Props) => {
 				sponsors={level4}
 				/>
 			}
+			<h3 className={style.notice}>This website is still under construction. If you don't see your name please be patient while you are added.</h3>
 		</Page>
 	)
 }

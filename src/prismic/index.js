@@ -32,7 +32,12 @@ const parseMedia = ({ url, alt, width, height }: { url: string, alt?: string, wi
 	height: parseInt(height, 10),
 })
 
-const joinText = (paras: Paragraph[]) => paras.map(p => p.text).join('\n')
+const joinText = (blocks: any[]) => blocks.map(p => {
+	if (p.type === 'image') {
+		return `![${p.alt}](${p.url})`
+	}
+	return p.text
+}).join('\n')
 
 const load  = async () => {
 	log.info('Loading from Prismic')
@@ -70,8 +75,10 @@ const load  = async () => {
 			}
 			case 'blogpost': {
 
+				console.log(result.rawJSON)
+
 				const blogPost = {
-					slug: result.slug,
+					slug: result.uid,
 					title: joinText(result.rawJSON.title),
 					date: moment(result.rawJSON.date),
 					blurb: joinText(result.rawJSON.blurb),

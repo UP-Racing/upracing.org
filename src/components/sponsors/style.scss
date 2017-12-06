@@ -72,6 +72,12 @@
   justify-content: center;
 }
 
+.notice {
+  width: 100%;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 30rem) {
   .sponsor {
     min-width: calc(100% - .25rem);

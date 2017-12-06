@@ -17,7 +17,7 @@ type Props = {
 const article = (props: Props) => (
 	<Page>
 		<Header
-			title={`${props.title} | Chris Aubert`}
+			title={`${props.title} | UPRacing`}
 			description={props.description}
 		/>
 		<div className={style.article}>
