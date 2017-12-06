@@ -21,10 +21,6 @@ type Result = {
 	lastPublicationDate: string,
 }
 
-type Paragraph = {
-	text: string,
-}
-
 const parseMedia = ({ url, alt, width, height }: { url: string, alt?: string, width: string, height: string }): Media => ({
 	src: url,
 	alt,
@@ -74,8 +70,6 @@ const load  = async () => {
 				break
 			}
 			case 'blogpost': {
-
-				console.log(result.rawJSON)
 
 				const blogPost = {
 					slug: result.uid,
