@@ -74,7 +74,6 @@ gulp.task('build:public:resources', ['build:public:resources:coreFiles'], () => 
 		base: paths.src.resourcesFolder
 	})
 		.pipe(plumber())
-		.pipe(imagemin())
 		.pipe(gulp.dest(paths.build.publicFiles))
 })
 

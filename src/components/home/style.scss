@@ -1,13 +1,69 @@
 @import '../ui/core';
 
-.container {
-  width: 100%;
+@keyframes Logo {
+  0% {
+    opacity: 0;
+    width: 50vw;
+    height: 100vh;
+  }
+  25% {
+    opacity: 0;
+    width: 50vw;
+    height: 100vh;
+  }
+  50% {
+    opacity: 1;
+    width: 50vw;
+    height: 100vh;
+  }
+  100% {
+    opacity: 1;
+    width: 10vw;
+    height: 6rem;
+  }
 }
 
-.header {
+@keyframes Nav {
+  0% {
+    opacity: 0;
+  }
+  78% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+  overflow: hidden;
+}
+
+.logoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+
+  svg {
+    color: $white;
+    animation: Logo 4s;
+    opacity: 1;
+    width: 10vw;
+    height: 6rem;
+  }
+}
+
+.heroContainer {
   justify-content: center;
   width: 100%;
-  max-height: calc(100vh - 8rem);
+  margin-top: 6rem;
+  max-height: calc(100vh - 12rem);
   background-color: $black;
 
   .hero {
@@ -17,7 +73,7 @@
     object-fit: contain;
 
     opacity: 1;
-    transition: opacity 500ms;
+    transition: opacity 1s;
   }
 
   .faded {
@@ -25,17 +81,35 @@
   }
 }
 
-.main {
-  flex-wrap: wrap;
+.navContainer {
+  z-index: 5;
+  width: 100%;
+  height: 4rem;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+
+  animation: Nav 5s;
+
+  .nav {
+    width: 100%;
+    height: 12.5vh;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-size: 125%;
+      height: 2rem;
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      border-bottom: .1rem solid $black;
+      transition: border-color 250ms;
+
+      &:hover {
+        border-bottom-color: $white;
+      }
+    }
+  }
 }
 
-.sectionHeader {
-  width: 100%;
-  padding: .5rem 1rem;
-
-  text-align: center;
-  font-weight: bold;
-  font-size: 150%;
-}

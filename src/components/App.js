@@ -25,7 +25,6 @@ const App = (props: Props) => {
 				render={() => (<HomePage {...props} />)}
 			/>
 			<Route
-				exact
 				path="/blog/"
 				render={() => (<Blog {...props} />)}
 			/>
