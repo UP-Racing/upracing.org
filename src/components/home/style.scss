@@ -1,44 +1,8 @@
 @import '../ui/core';
 
-@keyframes Logo {
-  0% {
-    opacity: 0;
-    width: 50vw;
-    height: 100vh;
-  }
-  25% {
-    opacity: 0;
-    width: 50vw;
-    height: 100vh;
-  }
-  50% {
-    opacity: 1;
-    width: 50vw;
-    height: 100vh;
-  }
-  100% {
-    opacity: 1;
-    width: 10vw;
-    height: 6rem;
-  }
-}
-
-@keyframes Nav {
-  0% {
-    opacity: 0;
-  }
-  78% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: $black;
   overflow: hidden;
 }
 
@@ -47,15 +11,12 @@
   top: 0;
   left: 0;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
   width: 100vw;
+  height: 6rem;
 
   svg {
-    color: $white;
-    animation: Logo 4s;
-    opacity: 1;
-    width: 10vw;
-    height: 6rem;
+    height: 90%;
   }
 }
 
@@ -63,8 +24,7 @@
   justify-content: center;
   width: 100%;
   margin-top: 6rem;
-  max-height: calc(100vh - 12rem);
-  background-color: $black;
+  max-height: calc(100vh - 24rem);
 
   .hero {
     display: block;
@@ -81,35 +41,18 @@
   }
 }
 
-.navContainer {
-  z-index: 5;
-  width: 100%;
-  height: 4rem;
+.about {
   justify-content: center;
-  align-items: center;
-
-  animation: Nav 5s;
-
-  .nav {
-    width: 100%;
-    height: 12.5vh;
-    justify-content: space-between;
-    align-items: center;
-
-    a {
-      font-size: 125%;
-      height: 2rem;
-      color: $white;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      border-bottom: .1rem solid $black;
-      transition: border-color 250ms;
-
-      &:hover {
-        border-bottom-color: $white;
-      }
-    }
-  }
+  min-height: 8rem;
+  padding: .5rem;
 }
 
+.imageLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

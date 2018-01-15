@@ -2,9 +2,8 @@
 
 import React, { Component }  from 'react'
 import cx from 'classnames'
-import { Link } from 'react-router-dom'
 
-import { Image, WidthControlled, UPRacingLogo } from '../ui'
+import { Image, WidthControlled, UPRacingLogo, Nav, RichPageContent } from '../ui'
 
 import style from './style.scss'
 
@@ -17,7 +16,6 @@ type Props = {
 type State = {
 	activeImage: number,
 	fadeHero: boolean,
-	loaded: boolean,
 }
 
 class HomePage extends Component {
@@ -27,15 +25,11 @@ class HomePage extends Component {
 	state: State = {
 		activeImage: Math.floor(Math.random() * this.props.store.homePage.heros.length),
 		fadeHero: true,
-		loaded: false,
 	}
 
 	componentDidMount = () => {
-		setTimeout(() => {
-			this.setState({ fadeHero: false })
-			setInterval(this.changeImage, 10000)
-		}, 3500)
-		this.setState({ loaded: true })
+		this.setState({ fadeHero: false })
+		setInterval(this.changeImage, 5000)
 	}
 
 	render() {
@@ -52,15 +46,15 @@ class HomePage extends Component {
 						[style.faded]: this.state.fadeHero,
 					})}/>
 				</section>
-				<section className={style.navContainer}>
-					<WidthControlled noPadding>
-						<div className={style.nav} >
-							<Link to="/blog">Blog</Link>
-							<Link to="/sponsors">Sponsors</Link>
-							<a href="mailto:upracing.fs@gmail.com">Contact</a>
-						</div>
+				<section className={style.about}>
+					<WidthControlled>
+						<RichPageContent content={store.homePage.googleDescription} />
 					</WidthControlled>
 				</section>
+				<Nav hideHome />
+				<div className={style.imageLoader}>
+					{store.homePage.heros.map(image => <Image key={image.src} image={image}/>)}
+				</div>
 			</div>
 		)
 	}

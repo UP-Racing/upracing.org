@@ -61,11 +61,34 @@ const load  = async () => {
 				const homePage = {
 					...result.rawJSON,
 					heros: result.rawJSON.heros.map(h => parseMedia(h.hero)),
+					googleDescription: joinText(result.rawJSON.googledescription),
 				}
 
 				await dispatch({
 					type: 'UPDATE_HOME_PAGE',
 					homePage,
+				})
+				break
+			}
+			case 'about': {
+				const about = {
+					content: joinText(result.rawJSON.content),
+				}
+
+				await dispatch({
+					type: 'UPDATE_ABOUT',
+					about,
+				})
+				break
+			}
+			case 'story': {
+				const story = {
+					content: joinText(result.rawJSON.content),
+				}
+
+				await dispatch({
+					type: 'UPDATE_STORY',
+					story,
 				})
 				break
 			}

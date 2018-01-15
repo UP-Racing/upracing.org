@@ -21,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: .5rem;
+  padding: .75rem;
 
   background-color: $primary-colour;
   color: $primary-colour-text;
@@ -38,4 +38,5 @@
 
   background-color: $real-white;
   color: $black;
+  border: solid $border 1px;
 }

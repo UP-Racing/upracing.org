@@ -17,7 +17,6 @@ type Props = {
 
 const BlogArticle = ({ store, match }) => {
 	const post = selector.findBlogPostBySlug(store, match.params.slug)
-	console.log(post)
 
 	return (
 		<Article
@@ -42,6 +41,7 @@ const BlogList = ({ store }: { store: Store }) => {
 						key={post.slug}
 						title={post.title}
 						date={moment(post.date)}
+						bodyClassName={style.card}
 					>
 						{post.blurb}
 					</Card>
