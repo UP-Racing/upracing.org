@@ -5,4 +5,8 @@
   min-height: 100vh;
   justify-content: center;
   align-items: flex-start;
+
+  div > {
+    flex: 100%;
+  }
 }

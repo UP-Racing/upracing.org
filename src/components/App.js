@@ -4,6 +4,7 @@ import React  from 'react'
 import { Route } from 'react-router-dom'
 import { DefaultHeader } from './ui'
 import HomePage from './home'
+import About from './about'
 import Blog from './blog'
 import Sponsors from './sponsors'
 
@@ -23,6 +24,11 @@ const App = (props: Props) => {
 				exact
 				path="/"
 				render={() => (<HomePage {...props} />)}
+			/>
+			<Route
+				exact
+				path="/about"
+				render={() => (<About {...props} />)}
 			/>
 			<Route
 				path="/blog/"

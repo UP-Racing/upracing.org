@@ -15,6 +15,15 @@ export type Media = {
 
 export type HomePage = {
 	heros: Media[],
+	googleDescription: string,
+}
+
+export type About = {
+	content: string,
+}
+
+export type Story = {
+	content: string,
 }
 
 export type BlogPost = {
@@ -37,13 +46,22 @@ export type Store = {
 	blogPosts: Map<BlogPost>,
 	blogPostsByDate: string[],
 	sponsors: Sponsor[],
+	about: About,
+	story: Story,
 }
 
 export const DEFAULT_STORE_STATE: Store = {
 	homePage: {
 		heros: [],
+		googleDescription: '',
 	},
 	blogPosts: {},
 	blogPostsByDate: [],
 	sponsors: [],
+	about: {
+		content: '',
+	},
+	story: {
+		content: '',
+	},
 }

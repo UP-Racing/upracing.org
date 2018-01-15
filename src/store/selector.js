@@ -16,11 +16,18 @@ const findBlogPostBySlug = (store: Store, slug: string) => store.blogPosts[slug]
 
 const findSponsorByLevel = (store: Store, level: number) => store.sponsors.filter(s => s.level === level)
 
+
+const findAbout = (store: Store) => store.about
+
+const findStory = (store: Store) => store.story
+
 export default {
 	findHomePage,
 	findAllBlogPosts,
 	findMostRecentBlogPosts,
 	findBlogPostBySlug,
 	findSponsorByLevel,
+	findAbout,
+	findStory,
 }
 

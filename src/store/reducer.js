@@ -22,10 +22,20 @@ export default (store: Store = DEFAULT_STORE_STATE, action: Action) => {
 				homePage: action.homePage,
 			}
 		}
+		case 'UPDATE_ABOUT': {
+			return {
+				...store,
+				about: action.about,
+			}
+		}
+		case 'UPDATE_STORY': {
+			return {
+				...store,
+				story: action.story,
+			}
+		}
 		case 'UPDATE_BLOG_POST': {
 			const { blogPost } = action
-
-			// console.log(blogPost)
 
 			const next = {
 				...store,

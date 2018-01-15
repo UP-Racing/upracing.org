@@ -12,6 +12,7 @@ type PropTypes = {
 	title: string,
 	date?: moment,
 	className?: string,
+	bodyClassName?: string,
 	children?: any,
 	external?: boolean,
 	headerAtBottom?: boolean,
@@ -51,7 +52,7 @@ const Card = (props: PropTypes) => (
 					{props.date && (<h4>{props.date.format('YYYY-MM-DD')}</h4>)}
 				</div>
 			)}
-			<div className={style.body}>
+			<div className={cx(style.body, props.bodyClassName)}>
 				{props.children}
 			</div>
 			{props.headerAtBottom && (

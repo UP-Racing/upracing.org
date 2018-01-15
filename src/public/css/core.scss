@@ -1,3 +1,5 @@
+@import "../../components/ui/core";
+
 @font-face {
   font-family: 'Open Sans';
   font-weight: 300;
@@ -26,32 +28,6 @@
   url('//fonts.gstatic.com/l/font?kit=PRmiXeptR36kaC0GEAetxj4dnM32POWavC8T_whbZeI&skey=78fa527f8e87b8b8&v=v13#OpenSans') format('svg');
 }
 
-$real-white: #fff;
-$real-black: #000;
-$invisible: hsla(0, 0, 0, 0);
-$white: darken($real-white, 2%);
-$primary-colour: hsla(138, 58%, 32%, 1);
-$primary-colour-text: darken($white, 2%);
-$secondary-colour-text: #727272;
-$divider-colour:        #b6b6b6;
-$accent-colour:         #ff5252;
-$code-background-color: #fffff0;
-
-$black: lighten($real-black, 5%);
-$header-colour: $primary-colour; //hsla(295, 60%, 20%, 1);
-$nav-colour: darken($header-colour, 0%);
-$border: darken($real-white, 20%);
-$lift-off-grey: #888;
-
-$main-background: #ddd;
-$body-background: $real-white;
-
-$card-background: $real-white;
-$card-border: darken($card-background, 15%);
-$card-border-radius: .25rem;
-$card-width: calc(50% - 1rem);
-$card-width-wrap: 48rem;
-
 * {
   margin: 0;
   padding: 0;
@@ -72,4 +48,5 @@ section,
 article {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }

@@ -6,13 +6,17 @@ import { Link } from 'react-router-dom'
 import { WidthControlled } from '../index'
 import style from './style.scss'
 
-const nav = () => (
+type Props = {
+	hideHome?: boolean,
+}
+
+const nav = (props: Props) => (
 	<nav className={style.container}>
-		<WidthControlled noPadding>
+		<WidthControlled>
 			<div className={style.nav} >
-				<Link to="/">UPRacing</Link>
+				{!props.hideHome && <Link to="/">UPRacing</Link>}
+				<Link to="/about">About</Link>
 				<Link to="/blog">Blog</Link>
-				{/*<Link to="/team">Team</Link>*/}
 				<Link to="/sponsors">Sponsors</Link>
 				<a href="mailto:upracing.fs@gmail.com">Contact</a>
 			</div>

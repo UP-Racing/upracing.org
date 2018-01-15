@@ -26,6 +26,7 @@ const SponsorCard = ({ sponsor, className }: { sponsor: Sponsor, className: stri
 		external
 		headerAtBottom
 		title={sponsor.name}
+		bodyClassName={style.card}
 	>
 		<div className={style.imageContainer}>
 			<Image image={sponsor.image} />
