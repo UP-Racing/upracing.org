@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://chrisaubert.me/</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/work</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/blog</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/res/docs/Aubert_Chris_Resume.pdf</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/contact</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/work/upracing</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/work/eventnet</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/work/logimaze</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/blog/an-adventure-into-diffing-algorithms</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://chrisaubert.me/blog/another-redesign</loc>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>

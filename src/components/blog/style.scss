@@ -1,0 +1,18 @@
+@import '../ui/core';
+
+.container {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  padding: 2rem 1rem;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.card {
+  border-top: 0;
+}

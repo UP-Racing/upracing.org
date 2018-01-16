@@ -1,0 +1,27 @@
+machine:
+  node:
+    version: 6.10
+
+checkout:
+  post:
+    - cp config_sample.js config.js
+
+dependencies:
+  cache_directories:
+    - node_modules
+  post:
+    - npm i -g gulp
+
+test:
+  override:
+    - make qa
+
+deployment:
+  stage:
+    branch: develop
+    commands:
+      - sh deploy/deploy_stage.sh
+  production:
+    branch: master
+    commands:
+      - sh deploy/deploy_prod.sh

@@ -1,0 +1,58 @@
+@import '../ui/core';
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.logoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 6rem;
+
+  svg {
+    height: 90%;
+  }
+}
+
+.heroContainer {
+  justify-content: center;
+  width: 100%;
+  margin-top: 6rem;
+  max-height: calc(100vh - 24rem);
+
+  .hero {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .faded {
+    opacity: 0;
+  }
+}
+
+.about {
+  justify-content: center;
+  min-height: 8rem;
+  padding: .5rem;
+}
+
+.imageLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
