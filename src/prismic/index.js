@@ -122,6 +122,39 @@ const load  = async () => {
 				})
 				break
 			}
+			case 'team': {
+				const team = {
+					heads: [],
+					sectionHeads: [],
+					sections: [],
+				}
+
+				const parseTeamCard = (card: any) => ({
+					name: joinText(card.name || []),
+					image: parseMedia(card.image),
+					description: joinText(card.description || []),
+				})
+
+				result.rawJSON.leaders.forEach(card => {
+					team.heads.push(parseTeamCard(card))
+				})
+
+				result.rawJSON.sectionheads.forEach(card => {
+					team.sectionHeads.push(parseTeamCard(card))
+				})
+
+				result.rawJSON.sections.forEach(card => {
+					team.sections.push(parseTeamCard(card))
+				})
+
+				await dispatch({
+					type: 'UPDATE_TEAM',
+					team,
+				})
+				break
+			}
+			default:
+				log.warn(`Prismic type ${result.type} not known`)
 		}
 	}
 	log.info('Store updated')

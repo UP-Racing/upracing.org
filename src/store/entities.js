@@ -41,6 +41,17 @@ export type Sponsor = {
 	level: number,
 }
 
+export type TeamCard = {
+	name: string,
+	image: Media,
+	description: string,
+}
+
+export type Team = {
+	heads: TeamCard[],
+	sectionHeads: TeamCard[],
+	sections: TeamCard[],
+}
 export type Store = {
 	homePage: HomePage,
 	blogPosts: Map<BlogPost>,
@@ -48,6 +59,7 @@ export type Store = {
 	sponsors: Sponsor[],
 	about: About,
 	story: Story,
+	team: Team,
 }
 
 export const DEFAULT_STORE_STATE: Store = {
@@ -63,5 +75,10 @@ export const DEFAULT_STORE_STATE: Store = {
 	},
 	story: {
 		content: '',
+	},
+	team: {
+		heads: [],
+		sectionHeads: [],
+		sections: [],
 	},
 }

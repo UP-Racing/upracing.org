@@ -7,6 +7,7 @@ import HomePage from './home'
 import About from './about'
 import Blog from './blog'
 import Sponsors from './sponsors'
+import Contact from './contact'
 
 import style from './style.scss'
 
@@ -38,6 +39,11 @@ const App = (props: Props) => {
 				exact
 				path="/sponsors/"
 				render={() => (<Sponsors {...props} />)}
+			/>
+			<Route
+				exact
+				path="/contact/"
+				render={() => (<Contact {...props} />)}
 			/>
 		</div>
 	)

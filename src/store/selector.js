@@ -16,10 +16,15 @@ const findBlogPostBySlug = (store: Store, slug: string) => store.blogPosts[slug]
 
 const findSponsorByLevel = (store: Store, level: number) => store.sponsors.filter(s => s.level === level)
 
-
 const findAbout = (store: Store) => store.about
 
 const findStory = (store: Store) => store.story
+
+const findTeamHeads = (store: Store) => store.team.heads
+
+const findTeamSectionHeads = (store: Store) => store.team.sectionHeads
+
+const findTeamSections = (store: Store) => store.team.sections
 
 export default {
 	findHomePage,
@@ -29,5 +34,8 @@ export default {
 	findSponsorByLevel,
 	findAbout,
 	findStory,
+	findTeamHeads,
+	findTeamSectionHeads,
+	findTeamSections,
 }
 
