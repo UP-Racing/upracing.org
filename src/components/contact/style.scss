@@ -1,0 +1,53 @@
+@import '../ui/core';
+
+.container {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  padding: 2rem 1rem;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.icons {
+  justify-content: space-between;
+}
+
+.iconContainer {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.icon {
+  margin: 1rem;
+}
+
+.mail {
+  color: #d3505a;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.youtube {
+  color: #e52d27;
+}
+
+.twitter {
+  color: #55acee;
+}
+
+.instagram {
+  color: #000;
+}

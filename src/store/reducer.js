@@ -60,6 +60,12 @@ export default (store: Store = DEFAULT_STORE_STATE, action: Action) => {
 				sponsors,
 			}
 		}
+		case 'UPDATE_TEAM': {
+			return {
+				...store,
+				team: action.team,
+			}
+		}
 		default: {
 			return store
 		}

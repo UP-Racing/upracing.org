@@ -6741,6 +6741,24 @@ pretty-hrtime@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
 
+prismic-dom@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/prismic-dom/-/prismic-dom-2.0.6.tgz#527efeaa5e8a93f5c6a1db93fb569e716349fbb9"
+  dependencies:
+    prismic-helpers "^1.0.0"
+    prismic-richtext "^0.2.6"
+
+prismic-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prismic-helpers/-/prismic-helpers-1.0.0.tgz#8337420cf187f55fb7b7a8be755523c8696fc329"
+
+prismic-richtext@^0.2.6:
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/prismic-richtext/-/prismic-richtext-0.2.7.tgz#ad203fc076bda9c4b6358ca7249f7e0072c5a323"
+  dependencies:
+    prismic-helpers "^1.0.0"
+    uuid "^3.1.0"
+
 prismic.io@^3.5.7:
   version "3.5.7"
   resolved "https://registry.yarnpkg.com/prismic.io/-/prismic.io-3.5.7.tgz#bc0538bfc2c165a262e6963047c9f95bf8384dff"
@@ -8602,7 +8620,7 @@ uuid@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
-uuid@^3.0.0, uuid@^3.0.1:
+uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 

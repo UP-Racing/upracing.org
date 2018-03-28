@@ -18,7 +18,7 @@ const nav = (props: Props) => (
 				<Link to="/about">About</Link>
 				<Link to="/blog">Blog</Link>
 				<Link to="/sponsors">Sponsors</Link>
-				<a href="mailto:upracing.fs@gmail.com">Contact</a>
+				<Link to="/contact">Contact</Link>
 			</div>
 		</WidthControlled>
 	</nav>

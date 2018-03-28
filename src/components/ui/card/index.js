@@ -6,19 +6,29 @@ import cx from 'classnames'
 import moment from 'moment'
 
 import style from './style.scss'
+import { Image } from '../index'
 
 type PropTypes = {
-	url: string,
+	url?: string,
 	title: string,
 	date?: moment,
 	className?: string,
 	bodyClassName?: string,
 	children?: any,
+	image?: any,
 	external?: boolean,
 	headerAtBottom?: boolean,
 }
 
 const Link = (props: PropTypes) => {
+	if (!props.url) {
+		return (
+			<div
+				className={cx(style.container, props.className)}
+			>
+				{props.children}
+			</div>)
+	}
 	if (props.external) {
 		return (
 			<a
@@ -46,6 +56,11 @@ const Card = (props: PropTypes) => (
 		{...props}
 	>
 		<article className={style.card}>
+			{props.image && (
+				<div className={style.imageContainer}>
+					<Image image={props.image} />
+				</div>
+			)}
 			{!props.headerAtBottom && (
 				<div className={style.header}>
 					<h3>{props.title}</h3>

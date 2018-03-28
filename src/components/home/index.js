@@ -21,6 +21,7 @@ type State = {
 class HomePage extends Component {
 
 	props: Props
+	interval: ?number
 
 	state: State = {
 		activeImage: Math.floor(Math.random() * this.props.store.homePage.heros.length),
@@ -29,7 +30,11 @@ class HomePage extends Component {
 
 	componentDidMount = () => {
 		this.setState({ fadeHero: false })
-		setInterval(this.changeImage, 5000)
+		this.interval = setInterval(this.changeImage, 5000)
+	}
+
+	componentWillUnmount = () => {
+		clearInterval(this.interval)
 	}
 
 	render() {
