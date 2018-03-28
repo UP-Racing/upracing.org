@@ -32,7 +32,6 @@ const joinText = (blocks: any[]) => blocks.map(p => {
 	if (p.type === 'image') {
 		return `![${p.alt}](${p.url})`
 	}
-	console.log(p.spans)
 	return p.text
 }).join('\n')
 
@@ -137,8 +136,6 @@ const load  = async () => {
 				})
 
 				result.rawJSON.leaders.forEach(card => {
-					console.log(card.description)
-					card.description.forEach(console.log)
 					team.heads.push(parseTeamCard(card))
 				})
 
@@ -146,15 +143,9 @@ const load  = async () => {
 					team.sectionHeads.push(parseTeamCard(card))
 				})
 
-				// console.log(result.rawJSON)
-
 				result.rawJSON.sections.forEach(card => {
 					team.sections.push(parseTeamCard(card))
 				})
-
-				// console.log('sdkfd')
-
-				// console.log(team)
 
 				await dispatch({
 					type: 'UPDATE_TEAM',

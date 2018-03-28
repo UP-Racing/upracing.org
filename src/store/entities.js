@@ -80,5 +80,5 @@ export const DEFAULT_STORE_STATE: Store = {
 		heads: [],
 		sectionHeads: [],
 		sections: [],
-	}
+	},
 }

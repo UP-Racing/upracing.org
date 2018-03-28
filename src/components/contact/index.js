@@ -1,20 +1,13 @@
 // @flow
 
 import React from 'react'
-import { Link } from 'react-router-dom'
 import FontAwesome from 'react-fontawesome'
 import cx from 'classnames'
 
 import { Page, Header } from '../ui'
 import style from './style.scss'
 
-import type { Store } from '../../store/entities'
-
-type Props = {
-	store: Store,
-}
-
-const Router = (props: Props) => (
+const Router = () => (
 	<Page>
 		<Header
 			title="Contact | UPRacing"
