@@ -60,6 +60,21 @@ export default (store: Store = DEFAULT_STORE_STATE, action: Action) => {
 				sponsors,
 			}
 		}
+		case 'UPDATE_NEWSLETTER': {
+			const { newsletter } = action
+
+			const next = {
+				...store,
+				newsLetters: {
+					...store.newsLetters,
+					[newsletter.slug]: newsletter,
+				}
+			}
+
+			next.newsLetters = getIdsSortedByDate(next.newsLetters)
+
+			return next
+		}
 		default: {
 			return store
 		}

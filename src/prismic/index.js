@@ -93,7 +93,6 @@ const load  = async () => {
 				break
 			}
 			case 'blogpost': {
-
 				const blogPost = {
 					slug: result.uid,
 					title: joinText(result.rawJSON.title),
@@ -121,6 +120,18 @@ const load  = async () => {
 					sponsor,
 				})
 				break
+			}
+			case 'newsletter': {
+				const newsLetter = {
+					slug: result.id,
+					document: parseMedia(results.rawJSON.document),
+					date: moment(result.rawJSON.date),
+				}
+
+				await dispatch({
+					type: 'UPDATE_NEWSLETTER',
+					newsLetter,
+				})
 			}
 		}
 	}

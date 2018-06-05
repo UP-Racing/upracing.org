@@ -1,6 +1,6 @@
 // @flow
 
-import type { Store, HomePage, BlogPost, Sponsor, About, Story } from './entities'
+import type { Store, HomePage, BlogPost, Sponsor, About, Story, NewsLetter } from './entities'
 
 type A<T, D> = { type: T } & D
 
@@ -20,6 +20,8 @@ type UpdateSponsor = A<'UPDATE_SPONSOR', {
 	sponsor: Sponsor,
 }>
 
+type UpdateNewsletter = A<'UPDATE_NEWSLETTER', { newsLetter: NewsLetter }>
+
 export type Action =
 	| Hydrate
 	| UpdateHomePage
@@ -27,3 +29,4 @@ export type Action =
 	| UpdateSponsor
 	| UpdateAbout
 	| UpdateStory
+	| UpdateNewsletter

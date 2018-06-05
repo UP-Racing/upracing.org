@@ -41,6 +41,12 @@ export type Sponsor = {
 	level: number,
 }
 
+export type NewsLetter = {
+	slug: string,
+	date: moment,
+	document: Media,
+}
+
 export type Store = {
 	homePage: HomePage,
 	blogPosts: Map<BlogPost>,
@@ -48,6 +54,8 @@ export type Store = {
 	sponsors: Sponsor[],
 	about: About,
 	story: Story,
+	newsLetters: Map<NewsLetter>,
+	newsLettersByDate: string[],
 }
 
 export const DEFAULT_STORE_STATE: Store = {
@@ -64,4 +72,6 @@ export const DEFAULT_STORE_STATE: Store = {
 	story: {
 		content: '',
 	},
+	newsLetters: {},
+	newsLettersByDate: [],
 }
